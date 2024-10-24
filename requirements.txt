@@ -1,0 +1,7 @@
+langchain_core==0.3.12
+langchain_groq==0.2.0
+langchain_openai==0.2.3
+python-dotenv==1.0.1
+python_ffmpeg==2.0.12
+pytubefix==8.1.1
+whisperx==3.1.1
