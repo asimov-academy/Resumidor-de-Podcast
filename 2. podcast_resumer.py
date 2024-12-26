@@ -1,11 +1,17 @@
 import whisperx
 import os
+from time import time
 
-audio_file = "audios/Como fazer um lançamento digital passo a passo (com Fernando Miranda) | ROI Hunters #263.mp3"
+t1 = time()
 
-model = whisperx.load_model("large-v2", device="cuda")
+audio_file = "audios/'Segredos Para Escalar Múltiplos 7DMês No Facebook Ads  Pedro Andrade - Segredos da Escala #071'"
+
+model = whisperx.load_model("small", 
+                            device="cpu",
+                            compute_type="int8")
 audio = whisperx.load_audio(audio_file)
 result = model.transcribe(audio)
+print("Total time elapsed: ", time() - t1)
 print("Transcription: ", result["segments"])
 
 
